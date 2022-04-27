@@ -46,16 +46,12 @@
 
 .icons {
   display: flex;
-  .icon {
+  box-icon {
       margin-top: 1rem;
       margin-right: 1.4rem;
       font-size: 35px;
       cursor: pointer;
       color: rgb(157, 155, 155);
-
-      &:hover {
-          color: red;
-      }
   }
 }
 

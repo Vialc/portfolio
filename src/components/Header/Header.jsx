@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header__logo">
-        <h1>Vitor</h1>
+        <h1>Vitor <box-icon type='logo' name='react' animation='spin' /></h1>
       </div>
 
       <nav className={active ? "navbar active" : "navbar"}>

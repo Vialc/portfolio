@@ -1,4 +1,3 @@
-import { GitHub, LinkedIn } from "@material-ui/icons";
 import React from "react";
 import "./Main.scss";
 import main from "../../assets/main2.png";
@@ -14,8 +13,8 @@ const Main = () => {
             <p>Front-end Developer</p>
 
             <div className="icons">
-              <a href="https://www.linkedin.com/in/vitoralcantara-dev/"><LinkedIn className="icon"  /></a>
-              <a href="https://github.com/Vialc"><GitHub className="icon" /></a>
+              <a href="https://www.linkedin.com/in/vitoralcantara-dev/"><box-icon type='logo' name='linkedin-square' animation='fade-up-hover' /></a>
+              <a href="https://github.com/Vialc"><box-icon type='logo' name='github' animation='fade-up-hover' /></a>
             </div>
 
             <div className="buttons">
