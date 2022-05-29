@@ -9,10 +9,11 @@
 
 .header__logo {
   margin-left: 3.445rem;
+  color: #fff;
 }
 
 .navbar {
-  margin: 0 auto;
+  margin: 0 208px;
 }
 
 ul {
@@ -24,10 +25,10 @@ ul {
      a {
          text-decoration: none;
          text-transform: uppercase;
-         color: #000;
+         color: #fff;
 
          &:hover {
-             border-bottom: 3px solid red;
+             border-bottom: 3px solid rgb(31, 83, 59);
          }
      }
  }
