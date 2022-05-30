@@ -1,3 +1,49 @@
+section {
+  background-color: rgba(101, 134, 104, 0.5);
+
+  &:before {
+    content: "";
+    background-image: url("../../assets/portfolio-works-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    opacity: 0.2;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+  &#work-01--hovered {
+    &:before {background-image: url("../../assets/project-solar-calculator.png"); filter:blur(2px)}
+  }
+
+  &#work-02--hovered {
+    &:before {background-image: url("../../assets/project-study-count.png"); filter:blur(2px)}
+  }
+
+  &#work-03--hovered {
+    &:before {background-image: url("../../assets/project-weon.jpg"); filter:blur(2px)}
+  }
+
+  &[id^="work-"] {
+    &:before {opacity: 1;}
+  }
+
+  &[id^="work-"] .card:not(.card--hovered) {
+    filter: grayscale(100%)
+  }
+}
+
+.container__works {
+  font-family: "League Spartan", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  //perspective: 3000px;
+}
+
 .work-title {
   display: flex;
   h1 {
@@ -8,15 +54,8 @@
   }
 }
 
-.works {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
 @media (min-width: 50em) {
-  .work__section {
+  .works__carousel {
     padding: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -24,48 +63,57 @@
   }
 }
 
-.cards {
+.controller {
   position: relative;
-  cursor: pointer;
-  border: 3px solid rgb(158, 145, 145);
-
-  img {
-    height: 100%;
-  }
-
-  button {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: transparent;
-    border: 3px solid rgb(255, 255, 255);
-    padding: 10px 20px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    opacity: 0;
-    font-size: 20px;
-    font-weight: bolder;
-    text-transform: uppercase;
-
-    &:hover {
-      background: #fff;
-      color: firebrick;
-    }
-  }
-
-  &:hover button {
-    opacity: 1;
-    transition: 450ms;
-  }
-
-  &:hover img {
-    opacity: 0.6;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
 }
 
+.controller__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: linear-gradient(25deg, rgb(7, 51, 7), rgb(30, 30, 30));
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.controller__button:hover {
+  transform: scale(1.1);
+}
+
+.controller__button:nth-child(2) {
+  margin: 0 3.75rem;
+}
+
+.controller__line {
+  background-color: black;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+}
+
+.works-carousel {
+  display: flex;
+  justify-content: center;
+  width: calc(100vw / 3 - 10%);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
+}
+
+
 @media (max-width: 800px) {
-  .work__section {
+  .works__carousel {
     padding: 12px;
     display: grid;
     gap: 1.335rem;
