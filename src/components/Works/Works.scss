@@ -41,7 +41,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  //perspective: 3000px;
+  perspective: 3000px;
 }
 
 .work-title {
@@ -54,54 +54,22 @@ section {
   }
 }
 
-@media (min-width: 50em) {
-  .works__carousel {
-    padding: 15px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 1.5rem;
-  }
-}
-
-.controller {
-  position: relative;
+.works__carousel {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 3rem;
+  width: calc(100vw / 3 - 10%);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
 }
 
-.controller__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 2px solid black;
-  border-radius: 50%;
-  background: linear-gradient(25deg, rgb(7, 51, 7), rgb(30, 30, 30));
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1;
-  transition: transform 0.3s ease-in-out;
-}
-
-.controller__button:hover {
-  transform: scale(1.1);
-}
-
-.controller__button:nth-child(2) {
-  margin: 0 3.75rem;
-}
-
-.controller__line {
-  background-color: black;
-  width: 50%;
-  height: 2px;
-  position: absolute;
-}
+// @media (min-width: 50em) {
+//   .works__carousel {
+//     padding: 15px;
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+//     gap: 1.5rem;
+//   }
+// }
 
 .works-carousel {
   display: flex;
