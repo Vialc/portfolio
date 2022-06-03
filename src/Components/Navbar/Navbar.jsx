@@ -15,7 +15,7 @@ export default function Navbar() {
           <ul style={{ listStyleType: "none" }}>
             <Link
               spy={true}
-              to='Navbar'
+              to="Navbar"
               smooth={true}
               activeClass="activeClass"
             >
@@ -23,7 +23,7 @@ export default function Navbar() {
             </Link>
             <Link
               spy={true}
-              to='Services'
+              to="Services"
               smooth={true}
               activeClass="activeClass"
             >
@@ -31,7 +31,7 @@ export default function Navbar() {
             </Link>
             <Link
               spy={true}
-              to='Experience'
+              to="Experience"
               smooth={true}
               activeClass="activeClass"
             >
@@ -39,7 +39,7 @@ export default function Navbar() {
             </Link>
             <Link
               spy={true}
-              to='Portfolio'
+              to="Portfolio"
               smooth={true}
               activeClass="activeClass"
             >
@@ -47,7 +47,9 @@ export default function Navbar() {
             </Link>
           </ul>
         </div>
-        <button className="button n-button">Contact</button>
+        <a href=" https://wa.me/5521965117167" target="_blank">
+          <button className="button n-button">Contact</button>
+        </a>
       </div>
     </div>
   );

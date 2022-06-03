@@ -14,11 +14,10 @@ import { themeContext } from "../../Contexts/ThemeContext";
 import { motion } from "framer-motion";
 
 export default function Intro() {
-
   const transition = { duration: 2, type: "spring" };
 
   const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode; 
+  const darkMode = theme.state.darkMode;
 
   return (
     <div className="intro">
@@ -29,15 +28,23 @@ export default function Intro() {
           <span>Fullstack Developer, producting the Quality work</span>
         </div>
 
-        <button className="button i-button">Hire me</button>
+        <a href=" https://wa.me/5521965117167" target="_blank">
+          <button className="button i-button">Hire me</button>
+        </a>
         <div className="i-icons">
-          <a href="https://github.com/Vialc">
+          <a href=" https://github.com/Vialc" target="_blank">
             <img src={Github} alt="" />
           </a>
-          <a href="https://www.linkedin.com/in/vitoralcantara-dev/">
+          <a
+            href=" https://www.linkedin.com/in/vitoralcantara-dev/"
+            target="_blank"
+          >
             <img src={Linkedin} alt="" />
           </a>
-          <a href="https://www.instagram.com/vitorc.alcantara/">
+          <a
+            href=" https://www.instagram.com/vitorc.alcantara/"
+            target="_blank"
+          >
             <img src={Instagram} alt="" />
           </a>
         </div>
@@ -56,7 +63,7 @@ export default function Intro() {
           alt=""
           className="floating-figure"
         />
-          <motion.div
+        <motion.div
           initial={{ top: "-4%", left: "66%" }}
           whileInView={{ left: "62%" }}
           transition={transition}
@@ -72,18 +79,25 @@ export default function Intro() {
         >
           <FloatingDiv image={Cofee} txt1={"Fulltime"} txt2={"Coding"} />
         </motion.div>
-        
-        <div className="blur" style={{ background: "rgb(238 210 255)", visibility: darkMode ? 'hidden' : ''}}></div>
-        <div className="blur" 
-              style={{ 
-                background: "#C1F5FF",
-                top: '10rem',
-                width: '21rem',
-                height: '11rem',
-                left: '-9rem',
-                visibility: darkMode ? 'hidden' : ''
-                }}></div>
 
+        <div
+          className="blur"
+          style={{
+            background: "rgb(238 210 255)",
+            visibility: darkMode ? "hidden" : "",
+          }}
+        ></div>
+        <div
+          className="blur"
+          style={{
+            background: "#C1F5FF",
+            top: "10rem",
+            width: "21rem",
+            height: "11rem",
+            left: "-9rem",
+            visibility: darkMode ? "hidden" : "",
+          }}
+        ></div>
       </div>
     </div>
   );
