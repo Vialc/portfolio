@@ -44,6 +44,12 @@
 	position: absolute;
 }
 
+@media screen and (max-width: 480px) {
+	.controller {
+		bottom: -19.9rem;
+	}
+}
+
 @media screen and (max-width: 375px) {
 	.controller__line {
 		width: 90%;
