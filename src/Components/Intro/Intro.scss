@@ -207,3 +207,14 @@
 		margin-top: 0rem;
 	}
 }
+
+@media screen and (max-width: 375px) {
+	.i-right {
+				
+		& > :nth-child(3) {
+				top: -17.8rem;
+				left: -62%;
+			}
+		
+	}
+}
