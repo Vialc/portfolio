@@ -1,11 +1,13 @@
-//import tweet from "../../assets/project-tweet.png";
-import solar from "../../assets/project-solar-calculator.png";
-import study from "../../assets/project-study-count.png";
-import crud from "../../assets/project-weon.jpg";
-import WorkCards from "./components/WorkCards/WorkCards";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { themeContext } from "../../Contexts/ThemeContext";
+import WorkCards from "./Components/WorkCards/WorkCards";
+import CarouselController from "./Components/CarouselController/CarouselController";
+
 import "./Works.scss";
-import CarouselController from "./components/CarouselController/CarouselController";
+
+import solar from "../../assets/img/project-solar-calculator.png";
+import study from "../../assets/img/project-study-count.png";
+import crud from "../../assets/img/project-weon.jpg";
 
 export const workList = [
   {
@@ -47,6 +49,9 @@ const Works = () => {
   const [sectionId, setSectionId] = useState("");
   const [currentButton, setCurrentButton] = useState(1);
 
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   const rotateYValue = -120 * (currentButton - 1);
 
   const rotateCarousel = {
@@ -62,11 +67,13 @@ const Works = () => {
   }
 
   return (
-    <section id={sectionId}>
-      <div id="portfolio" className="work-title">
-        <h1>
-          My <span>Portfolio</span>
-        </h1>
+    
+    <section className="works-section" id="Portfolio">
+      <div className="works-wrapper" id={sectionId}>
+      <div className="works-section-title">
+      <span style={{color: darkMode?'white':''}}>Recent Projects</span>
+      <span>Portfolio</span>
+        <div className="blur s-blur1" style={{ background: "#ABF1FF94"}}></div>
       </div>
       <div className="container__works">
         <div className="works__carousel" style={rotateCarousel}>
@@ -83,13 +90,14 @@ const Works = () => {
             );
           })}
         </div>
-        
-          <CarouselController
+        <CarouselController
             takeButtonId={handleButtonId}
             buttonList={buttonController}
           />
       </div>
+      </div>
     </section>
+    
   );
 };
 

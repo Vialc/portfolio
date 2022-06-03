@@ -15,7 +15,7 @@ export default function WorkCards({ title, mainImage, cardBackground, id, takeId
   }
   return (
     <>
-        <a onMouseEnter={handleWorkImageZoomOn} onMouseLeave={handleWorkImageZoomOff} href="#work" id={mouseHover ? `${id}--hovered` : ``} className={`card${mouseHover ? " card--hovered" : ""}`}>
+        <a onMouseEnter={handleWorkImageZoomOn} onMouseLeave={handleWorkImageZoomOff} href="#work" id={mouseHover ? `${id}--hovered` : ``} className={`work-card${mouseHover ? " work-card--hovered" : ""}`}>
           <img className="card__background" src={cardBackground} alt="" />
           <img className="card__image" src={mainImage} alt="" />
           <h2 className="card__title">{title}</h2>
