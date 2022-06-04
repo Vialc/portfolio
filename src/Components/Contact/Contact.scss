@@ -10,7 +10,7 @@
 	justify-content: center;
 	position: relative;
 	flex: 1;
-	>form {
+	& > form {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -33,6 +33,28 @@ textarea {
 	top: 1rem;
 	left: 8rem;
 }
+
+@media screen and (min-width: 2559px) {
+	.contact-form {
+		transform: scale(1.5);
+		margin-top: 3rem;
+		width: 100vw;
+		padding: 0 50rem 0 50rem;
+		margin-left: 12rem;
+		margin-bottom: -45rem;
+	}
+
+	.c-right {
+		margin-right: 70rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.contact-form {
+		margin-top: 3rem;
+	}
+}
+
 @media screen and (max-width: 480px) {
 	.contact-form {
 		padding: 0;

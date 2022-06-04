@@ -20,6 +20,13 @@
 	display: flex;
 	gap: 2rem;
 }
+
+@media screen and (min-width: 2559px) {
+	.f-content {
+		transform: scale(1.9);
+	}
+}
+
 @media screen and (max-width: 480px) {
 	.f-content {
 		transform: scale(.5);

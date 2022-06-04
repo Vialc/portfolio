@@ -39,7 +39,7 @@ export default function Contact() {
           <span>Contact me</span>
           <div
             className="blur s-blur1"
-            style={{ background: "#ABF1FF94" }}
+            style={{ background: "#ABF1FF94", display: darkMode ? 'none' : '' }}
           ></div>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function Contact() {
           <span>{done && "Thanks for Contacting me"}</span>
           <div
             className="blur c-blur1"
-            style={{ background: "var(--purple)" }}
+            style={{ background: "var(--purple)", display: darkMode ? 'none' : '' }}
           ></div>
         </form>
       </div>

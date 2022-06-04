@@ -34,6 +34,16 @@
 .n-button {
 	flex: 2;
 }
+
+@media screen and (min-width: 2559px) {
+	.n-wrapper {
+		transform: scale(1.9);
+		margin-left: 38rem;
+		margin-right: 30rem;
+	}
+}
+
+
 @media screen and (max-width: 768px) {
 	.n-list {
 		transform: scale(.9);
@@ -42,6 +52,7 @@
 		display: none;
 	}
 }
+
 @media screen and (max-width: 480px) {
 	.n-list {
 		display: none;

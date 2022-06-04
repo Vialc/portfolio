@@ -44,6 +44,12 @@
 	position: absolute;
 }
 
+@media screen and (min-width: 2559px) {
+	.controller {
+		bottom: -35.9rem;
+	}
+}
+
 @media screen and (max-width: 480px) {
 	.controller {
 		bottom: -19.9rem;

@@ -115,6 +115,62 @@
 	}
 }
 
+@media screen and (min-width: 2559px) {
+	.intro {
+		height: 50vh;
+		margin-top: -8rem;
+		margin-left: -2.7vw;
+		padding-top: 20rem;
+	}
+
+	.i-left {
+		transform: scale(1.6);
+		margin-top: 3rem;
+		margin-left: 18rem;
+		padding-left: 8rem;
+		margin-right: -6rem;
+	}
+
+	.i-right {
+		transform: scale(1.4);
+		left: -3rem;
+		margin-top: 2rem;
+		
+		& > :nth-child(3) {
+			left: -23%;
+			top: -17.6rem;
+		}
+	}
+
+	.floating-div1 {
+		margin-left: -7rem;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.intro {
+		height: 50vh;
+		margin-top: -6rem;
+		margin-left: -4.8vw;
+	}
+
+	.i-left {
+		padding-left: 8rem;
+		margin-right: -6rem;
+	}
+
+	.i-right {
+		transform: scale(0.9);
+		left: -3rem;
+		margin-top: -3rem;
+		
+		& > :nth-child(3) {
+				top: -17.6rem;
+		}
+		
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.intro {
 		height: 50vh;
@@ -158,7 +214,7 @@
 		margin-top: -4rem;
 	}
 	.i-right {
-		left: -6rem;
+		left: -1rem;
 		margin-top: -8rem;
 		transform: scale(0.7);
 		
@@ -209,6 +265,11 @@
 }
 
 @media screen and (max-width: 375px) {
+	.i-name {
+		& > :nth-child(2) {
+				font-size: 2.3rem;
+			}
+		}
 	.i-right {
 				
 		& > :nth-child(3) {
